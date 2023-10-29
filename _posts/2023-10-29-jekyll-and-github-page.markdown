@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Building a blog site with Jekyll and GitHub Page"
+title:  "Build a blog site with Jekyll and GitHub Page"
 date:   2023-10-29 13:00:00 -0700
 categories: Software
 ---
