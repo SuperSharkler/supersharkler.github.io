@@ -2,7 +2,7 @@
 layout: single
 title:  "Building a blog site with Jekyll and GitHub Page"
 date:   2023-10-29 13:00:00 -0700
-categories: software
+categories: Software
 ---
 I have been thinking of building my website for a while, though I was always blocked by my hesitation and uncertainty - how does it work? How will the DB schema look like, what backend API should it support, how should I make sure that only I have the credentials to update the website, etc?
 
