@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Sharkler Tech Blog
-description: software, electronics, motorcycles and probabaly some of my life
+description: This is about software, electronics, motorcycles and probabaly some of シャークラー life
 repository: "robosharkler/robosharkler.github.io"
 
 # Build settings
