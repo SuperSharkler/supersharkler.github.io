@@ -17,7 +17,7 @@ Install and embed Disqus to the site. Disqus itself is an online service, you re
 GitHub issue & discussion are places where people can create a topic (usually code-related) and add comments on it. Each Github repository will have its own issue & discussion board. Therefore, we can use the issue & discussion board of our GitHub Page repository to store all the comments. The implementation shouldn't be very hard either, which generally includes the below parts
 > * Standarzie the mapping from the "blog name" and the "issue/discussion topic name"
 > * When a user views a blog, let the GitHub Page (frontend) call the GitHub API (backend), probably through JavaScript + AJAX, to get and render all comments for the blog
-> * When a user wants to create a comment on a log, again use JavaScript + AJAX to create the issue/discussion topic (if not exist) and also create the comment \n 
+> * When a user wants to create a comment on a blog, again use JavaScript + AJAX to create the issue/discussion topic (if not exist) and also create the comment \n 
 
 Luckily, we don't need to build the wheels from scratch, two free GitHub apps will embed the above implementation to your GitHub Page: [Giscus](https://giscus.app/) for using GitHub discussion as the commenting section, and [Utteranc](https://utteranc.es/) for using the GitHub issue. 
 
