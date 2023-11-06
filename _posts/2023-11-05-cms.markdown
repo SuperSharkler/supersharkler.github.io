@@ -1,0 +1,24 @@
+---
+layout: single
+title:  Add the commenting feature to Jekyll GitHub Page
+date:   2023-11-05 23:00:00 -0700
+categories: Software
+---
+In the past week, I have been exploring different options to add the commenting feature to this site. And the conclusion is, we need to make our site dynamic, meaning we need a backend to store and display the comments. This blog will discuss two possible solutions I found. 
+
+> I don't think it is possible to have the commenting feature while the site still remains static, as the commenting itself is a dynamic action. 
+
+#### [Disqus](https://help.disqus.com/en/articles/1935528-jekyll-installation-instructions)
+Install and embed Disqus to the site. Disqus itself is an online service, you register your app/website with them, and your app/website will be able to utilize their APIs. In our case, when a new comment is created, an API call (HTTP request I guess) will be sent to Disqus, where all comments will be stored and fetched. I wouldn't recommend this option because
+  * Not free, we have to pay to use their API
+  * More importantly, it feels unnature to store the dynamic content (comments) on Disqus servers while the static content (blogs) is on GitHub servers. Either I want everything on my servers, in which case I would choose WordPress, or I want everything on GitHub. 
+
+#### GitHub issue & discussion
+GitHub issue & discussion are places where people can create a topic (usually code-related) and add comments on it. Each Github repository will have its own issue & discussion board. Therefore, we can use the issue & discussion board of our GitHub Page repository to store all the comments. The implementation shouldn't be very hard either, which generally includes the below parts
+> * Standarzie the mapping from the "blog name" and the "issue/discussion topic name"
+> * When a user views a blog, let the GitHub Page (frontend) call the GitHub API (backend), probably through JavaScript + AJAX, to get and render all comments for the blog
+> * When a user wants to create a comment on a log, again use JavaScript + AJAX to create the issue/discussion topic (if not exist) and also create the comment \n 
+
+Luckily, we don't need to build the wheels from scratch, two free GitHub apps will embed the above implementation to your GitHub Page: [Giscus](https://giscus.app/) for using GitHub discussion as the commenting section, and [Utteranc](https://utteranc.es/) for using the GitHub issue. 
+
+[Giscus](https://giscus.app/) is my final choice as it provides self-hosted options and instructions. Even though the Giscus on this site is not hosted by me currently, I still think it would be good to have the flexibility in case I need it. Also, I think discussion sounds more intuitive than issue to be a place for commenting.
